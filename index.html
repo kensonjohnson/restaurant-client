@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomy's</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <section>
+    <header>
+      <a href="#" class="logo"><img class="t-logo" src="assets/images/tomy1.png" alt="logo-image"><img class="t-logo" src="assets/images/tomy2.png" alt="logo-second-image"></a>
+      <div class="toggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="#" style="--i:1;">Home</a></li>
+        <li><a href="#" style="--i:2;">Menu</a></li>
+        <li><a href="#" style="--i:3;">Specials</a></li>
+        <li><a href="#" style="--i:4;">About Us</a></li>
+
+      </ul>
+    </header>
+    <div class="container">
+      <div class="box" style="--i:3;">
+        <div class="imgBx">
+          <img src="assets/images/burger.png">
+        </div>
+      </div>
+      <div class="box" style="--i:4;">
+        <div class="imgBx">
+          <img src="assets/images/burrito.png">
+        </div>
+      </div>
+      <div class="box" style="--i:5;">
+        <div class="imgBx">
+          <img src="assets/images/doubleB.png">
+        </div>
+      </div>
+      <div class="box" style="--i:6;">
+        <div class="imgBx">
+          <img src="assets/images/pancakes.png">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <ul class="sci">
+
+
+        <li><a href="#" id="order-now" class="myButton" style="--i:10">Order Now!</a></li>
+        <li><a href="#" style="--i:9"></a></li>
+        <li><a href="#" style="--i:8"></a></li>
+        <li><a href="#" style="--i:7"></a></li>
+      </ul>
+      <p class="copyrightText"><span class="blinking">Breakfast All Day!</span>
+      </p>
+    </div>
+
+  </section>
+
+  <section id="marquee-section">
+
+    <div class="section-2">
+      <p>This Weeks Specials</p>
+    </div>
+
+    <div class="container-2">
+      <div class="marquee">
+        <div class="img1"><img class="img1" src="assets/images/double150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/burger150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/chicken150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/sandwich150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/pancakes150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/double150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/burger150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/chicken150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/sandwich150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/pancakes150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/double150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/burger150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/chicken150.png"></div>
+        <div class="img1"><img class="img1" src="assets/images/sandwich150.png"></div>
+      </div>
+    </div>
+
+
+    <div id="special-Section-container">
+      <div class="special-container">
+        <div class="card">
+          <div class="imgBox">
+            <img src="assets/images/doubleBurger.png">
+          </div>
+          <div class="content">
+            <h2>Combo Special #1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBox">
+            <img src="assets/images/chickenBurger.png">
+          </div>
+          <div class="content">
+            <h2>Combo Special #2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBox">
+            <img src="assets/images/burrito2.png">
+          </div>
+          <div class="content">
+            <h2>Combo Special #3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="about-us">
+    <div class="section-2">
+      <p>About Us</p>
+    </div>
+
+    <div id="about-us-inner">
+
+
+
+      <div class="image3"><img class="img3" src="assets/images/tomy.jpg"></div>
+      <div class="image3"><img class="img3" id="img-border" src="assets/images/tomyLogo.jpg"></div>
+      <div class="image3"><img class="img3" id="img-border" src="assets/images/tomyStmnt.png"></div>
+      <div class="image3"><img class="img3" src="assets/images/tomyBurger.jpg"></div>
+
+    </div>
+
+
+  </section>
+
+  <section>
+
+  </section>
+
+  <script>
+    let imgBx = document.querySelectorAll('.imgBx');
+    imgBx.forEach(popup => popup.addEventListener('click', () => {
+      popup.classList.toggle('active')
+    }))
+
+    function toggleMenu() {
+      var menuToggle = document.querySelector('.toggle');
+      var navigation = document.querySelector('.navigation');
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+
+    toggleMenu();
+
+    function activateMenu(screenSize) {
+      if (screenSize.matches) { // If media query matches
+        toggleMenu();
+      }
+    }
+
+    var screenSize = window.matchMedia("(max-width: 768px)")
+    activateMenu(screenSize) // Call listener function at run time
+    screenSize.addListener(activateMenu) // Attach listener function on state changes
+  </script>
+</body>
+
+</html>
