@@ -12,29 +12,26 @@ body {
 }
 
 section {
-  padding: 100px;
   background: #ffffff;
   height: 100vh;
+  max-width: 1300px;
+  margin: auto;
 }
 
-section header {
-  position: absolute;
-  top: 0;
-  left: 0;
+header {
   width: 100%;
   height: 100px;
   padding: 20px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10000;
 }
 
 .t-logo {
   width: 30%;
 }
 
-section header .logo {
+.logo {
   position: relative;
   font-size: 28px;
   color: #111;
@@ -46,11 +43,11 @@ section header .logo {
   animation: slideLeft 0.5s ease-in-out forwards;
 }
 
-section header .toggle {
+.toggle {
   position: relative;
   width: 50px;
   height: 50px;
-  background: url(menuRed.png);
+  background: url(assets/images/menuRed.png);
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,28 +58,24 @@ section header .toggle {
   animation-delay: 0.5s;
 }
 
-section header .toggle.active {
-  background: url(bmenu.png);
+.toggle.active {
+  background: url(assets/images/bmenu.png);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .navigation {
-  position: absolute;
   display: flex;
-  right: 150px;
   opacity: 0;
-  visibility: hidden;
   transition: 0.5s;
 }
 
 .navigation.active {
   opacity: 1;
-  visibility: visible;
 }
 
-.navigation li {
+li {
   list-style: none;
 }
 
@@ -102,15 +95,13 @@ section header .toggle.active {
   animation-delay: calc(0.2s * var(--i));
 }
 
-section .container {
-  position: absolute;
+.container {
   display: flex;
   height: calc(100% - 200px);
   width: calc(100% - 200px);
-  z-index: 100;
 }
 
-section .container .box {
+.box {
   position: relative;
   width: 25%;
   height: 100%;
@@ -119,11 +110,11 @@ section .container .box {
   border-right: 10px solid #ffffff;
 }
 
-section .container .box:last-child {
+.box:last-child {
   border-right: none;
 }
 
-section .container .box .imgBx {
+.imgBx {
   position: absolute;
   top: 0;
   left: 0;
@@ -136,7 +127,7 @@ section .container .box .imgBx {
   animation-delay: calc(0.2s * var(--i));
 }
 
-section .container .box .imgBx.active {
+.imgBx.active {
   position: fixed;
   top: 100px;
   left: 100px;
@@ -147,7 +138,7 @@ section .container .box .imgBx.active {
   opacity: 1;
 }
 
-section .container .box .imgBx img {
+.imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -157,21 +148,16 @@ section .container .box .imgBx img {
   transition: 0.5s;
 }
 
-section .container .box .imgBx:hover img {
+.imgBx:hover img {
   transform: scale(1.2);
 }
 
-section .container .box .imgBx.active:hover img {
+.imgBx.active:hover img {
   transform: scale(1);
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  padding: 0 100px;
-  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -180,10 +166,6 @@ section .container .box .imgBx.active:hover img {
 .sci {
   position: relative;
   display: flex;
-}
-
-.sci li {
-  list-style: none;
 }
 
 .sci li a {
@@ -375,7 +357,7 @@ section .container .box .imgBx.active:hover img {
   padding-bottom: 75px;
 }
 
-.section-2 {
+.marquee-title {
   background-color: #c83c37;
   height: 40px;
   color: #ffffff;
@@ -384,7 +366,7 @@ section .container .box .imgBx.active:hover img {
   text-align: center;
 }
 
-.container-2 {
+.marquee-container {
   padding: 3px;
   width: 100%;
   overflow: hidden;
@@ -408,7 +390,7 @@ section .container .box .imgBx.active:hover img {
   animation-play-state: paused;
 }
 
-.img1 {
+.marquee-image {
   width: 150px;
   height: 150px;
   /* background-color: #f6f6f6; */
