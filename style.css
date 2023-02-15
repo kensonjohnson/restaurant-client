@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -106,46 +106,57 @@ li {
   margin: auto;
   gap: 0.5rem;
   height: calc(100% - 200px);
+  position: relative;
+  z-index: 1;
 }
 
 .box {
   width: 25%;
   height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
   background: var(--background-clr);
   overflow: hidden;
+  position: relative;
+
 }
 
 .imgBx {
   width: 100%;
   height: 100%;
-  transition: 0.5s;
-  opacity: 0;
-  animation: slideRight 0.5s ease-in-out forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-
-.imgBx.active {
-  position: fixed;
-  top: 100px;
-  left: 100px;
-  width: calc(100% - 200px);
-  height: calc(100% - 200px);
-  opacity: 1;
+  position: relative;
 }
 
 .imgBx img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s;
+  transition: transform 0.5s;
 }
 
 .imgBx:hover img {
   transform: scale(1.2);
 }
 
-.imgBx.active:hover img {
-  transform: scale(1);
+.imgBx.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+.imgBx.active img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 9999;
 }
 
 .footer {
