@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,17 +135,4 @@
   </section>
 </body>
 
-        function activateMenu(screenSize) {
-          if (screenSize.matches) {
-            // If media query matches
-            toggleMenu();
-          }
-        }
-
-        var screenSize = window.matchMedia('(max-width: 768px)');
-        activateMenu(screenSize); // Call listener function at run time
-        screenSize.addListener(activateMenu); // Attach listener function on state changes
-      </script>
-    </body>
-  </html>
 </html>
