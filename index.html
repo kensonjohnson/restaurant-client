@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tomy's</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,14 +17,13 @@
         <img class="t-logo" src="assets/images/tomy1.png" alt="logo-image">
         <img class="t-logo" src="assets/images/tomy2.png" alt="logo-second-image">
       </a>
-      <div class="toggle" onclick="toggleMenu();"></div>
-      <ul class="navigation">
+      <ul class="navigation active">
         <li><a href="#" style="--i:1;">Home</a></li>
         <li><a href="#" style="--i:2;">Menu</a></li>
         <li><a href="#" style="--i:3;">Specials</a></li>
         <li><a href="#" style="--i:4;">About</a></li>
-
       </ul>
+      <div class="menu" onclick="toggleMenu()" data-menu-button></div>
     </header>
     <div class="container">
       <div class="box" style="--i:3;">
@@ -86,30 +86,30 @@
     <div id="special-Section-container">
       <div class="special-container">
         <div class="card">
-          <div class="imgBox">
+          <div class="combo-image">
             <img src="assets/images/doubleBurger.png">
           </div>
-          <div class="content">
+          <div class="combo-description">
             <h2>Combo Special #1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
           </div>
         </div>
         <div class="card">
-          <div class="imgBox">
+          <div class="combo-image">
             <img src="assets/images/chickenBurger.png">
           </div>
-          <div class="content">
+          <div class="combo-description">
             <h2>Combo Special #2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
           </div>
         </div>
         <div class="card">
-          <div class="imgBox">
+          <div class="combo-image">
             <img src="assets/images/burrito2.png">
           </div>
-          <div class="content">
+          <div class="combo-description">
             <h2>Combo Special #3</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -122,48 +122,18 @@
 
   <section id="about-us">
     <div class="section-2">
-      <p>About Us</p>
+      <h2>About Us</h2>
     </div>
 
     <div id="about-us-inner">
-
-
-
       <div class="image3"><img class="img3" src="assets/images/tomy.jpg"></div>
       <div class="image3"><img class="img3" id="img-border" src="assets/images/tomyLogo.jpg"></div>
       <div class="image3"><img class="img3" id="img-border" src="assets/images/tomyStmnt.png"></div>
       <div class="image3"><img class="img3" src="assets/images/tomyBurger.jpg"></div>
-
     </div>
 
 
   </section>
-
-  <script>
-    let imgBx = document.querySelectorAll('.imgBx');
-    imgBx.forEach(popup => popup.addEventListener('click', () => {
-      popup.classList.toggle('active')
-    }))
-
-    function toggleMenu() {
-      var menuToggle = document.querySelector('.toggle');
-      var navigation = document.querySelector('.navigation');
-      menuToggle.classList.toggle('active');
-      navigation.classList.toggle('active');
-    }
-
-    toggleMenu();
-
-    function activateMenu(screenSize) {
-      if (screenSize.matches) { // If media query matches
-        toggleMenu();
-      }
-    }
-
-    var screenSize = window.matchMedia("(max-width: 768px)")
-    activateMenu(screenSize) // Call listener function at run time
-    screenSize.addListener(activateMenu) // Attach listener function on state changes
-  </script>
 </body>
 
 </html>

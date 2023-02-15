@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -14,13 +14,14 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   padding: 2rem;
 }
 
 section {
   background: var(--background-clr);
-  height: 100vh;
   max-width: var(--max-element-width);
   margin: auto;
 }
@@ -29,6 +30,7 @@ header {
   width: 100%;
   height: 100px;
   padding: 20px;
+  padding-right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,23 +52,16 @@ header {
   animation: slideLeft 0.5s ease-in-out forwards;
 }
 
-.toggle {
-  width: 100px;
-  height: 100px;
-  background: url(assets/images/menuRed.png);
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  animation: slideRight 0.5s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-.toggle.active {
+.menu {
+  width: 70px;
+  height: 70px;
   background: url(assets/images/bmenu.png);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  animation: slideRight 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+  margin-left: 1rem;
 }
 
 .navigation {
@@ -80,6 +75,7 @@ header {
 }
 
 li {
+  text-decoration: none;
   align-self: center;
   list-style: none;
   width: fit-content;
@@ -88,7 +84,6 @@ li {
 .navigation li a {
   display: block;
   color: var(--element-background-clr);
-  text-decoration: none;
   font-size: 16px;
   margin-left: 15px;
   font-weight: 600;
@@ -102,10 +97,11 @@ li {
 }
 
 .container {
+  position: relative;
   display: flex;
   margin: auto;
   gap: 0.5rem;
-  height: calc(100% - 200px);
+  height: 40rem;
 }
 
 .box {
@@ -125,12 +121,13 @@ li {
 }
 
 .imgBx.active {
-  position: fixed;
-  top: 100px;
-  left: 100px;
-  width: calc(100% - 200px);
-  height: calc(100% - 200px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% -100px);
+  height: 40rem;
   opacity: 1;
+  z-index: 100;
 }
 
 .imgBx img {
@@ -143,7 +140,6 @@ li {
 .imgBx:hover img {
   transform: scale(1.2);
 }
-
 .imgBx.active:hover img {
   transform: scale(1);
 }
@@ -306,17 +302,17 @@ li {
 /* Special's Section */
 #special-Section-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  min-height: 60vh;
+  min-height: fit-content;
+  padding: 3rem;
   background: var(--background-clr);
   border-top: 6px solid var(--element-background-clr);
   border-bottom: 6px solid var(--element-background-clr);
 }
 
 .special-container {
-  position: relative;
-  width: 1500px;
+  width: var(--max-element-width);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,31 +320,22 @@ li {
   padding: 30px 20px 10px;
 }
 
-.special-container .card {
-  max-width: 300px;
-  height: 420px;
-  height: 215px;
+.card {
+  width: 300px;
+  height: fit-content;
   background: var(--element-background-clr);
-  margin: 30px 30px;
-  padding: 20px 15px;
-  display: flex;
+  margin: 1rem;
+  margin-bottom: 3rem;
   border-radius: 4px;
   flex-direction: column;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
-  box-sizing: content-box;
 }
 
-.special-container .card:hover {
-  height: 420px;
-}
-
-.special-container .card .imgBox {
+.combo-image {
   position: relative;
   background: var(--background-clr);
-  top: -60px;
+  top: -40px;
   left: 20px;
-  min-width: initial;
   width: 260px;
   height: 260px;
   border-radius: 4px;
@@ -356,28 +343,17 @@ li {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.special-container .card .imgBox img {
+.combo-image img {
   max-width: 100%;
   border-radius: 4px;
 }
 
-.special-container .card .content {
+.combo-description {
   position: relative;
-  margin-top: -140px;
+  margin-top: -40px;
   padding: 10px 15px;
   text-align: center;
   color: var(--background-clr);
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-  transition-delay: 0s;
-}
-
-.special-container .card:hover .content {
-  visibility: visible;
-  opacity: 1;
-  margin-top: -40px;
-  transition-delay: 0.3s;
 }
 
 /* About Us Section */
@@ -398,6 +374,11 @@ li {
   border-bottom: 6px solid var(--element-background-clr);
 }
 
+.section-2 {
+  width: 100%;
+  text-align: center;
+}
+
 .img3 {
   height: 99%;
   width: 99%;
@@ -416,36 +397,36 @@ li {
 
 @media (max-width: 768px) {
   section {
-    padding: 80px 20px;
+    padding: 50px 0;
   }
 
   section header {
     height: 70px;
-    padding: 10px 20px;
   }
 
   .navigation {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    margin: 0;
     display: flex;
     z-index: 1000;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-top: 17px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
     background: var(--element-background-clr);
+    padding: 0;
+  }
+
+  .navigation li {
+    align-self: start;
   }
 
   .navigation li a {
     color: var(--background-clr);
-    text-decoration: none;
     font-size: 20px;
-    margin: 5px 10px;
-    letter-spacing: 1px;
-    display: inline-block;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -485,7 +466,7 @@ li {
   .container-2 {
     width: 100%;
   }
-  .imgBox {
+  .combo-image {
     left: 0px;
   }
 }
