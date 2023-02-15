@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -97,22 +97,19 @@ li {
 }
 
 .container {
-  position: relative;
   display: flex;
   margin: auto;
   gap: 0.5rem;
   height: 40rem;
+  position: relative;
 }
 
 .box {
   width: 25%;
   height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
   background: var(--background-clr);
   overflow: hidden;
-  position: relative;
-
 }
 
 .imgBx {
