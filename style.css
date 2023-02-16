@@ -13,8 +13,24 @@
   --header-height: 100px;
   --background-clr: #ecf2ff;
   --element-background-clr: #c83c37;
+  --scroll-speed: 120s;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--element-background-clr);
+  width: 1rem;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -262,13 +278,24 @@ li {
   height: 100%;
 }
 
-.marquee-title {
+.marquee-title, .marquee-footer {
   background-color: var(--element-background-clr);
   height: 40px;
   color: var(--background-clr);
   padding-left: 5px;
   font-size: 25px;
   text-align: center;
+}
+
+.marquee-title{
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.marquee-footer{
+border-bottom-right-radius: 1rem;
+border-bottom-left-radius: 1rem;
+margin-bottom: 1rem;
 }
 
 .marquee-container {
@@ -280,22 +307,21 @@ li {
 }
 
 .marquee {
-  display: block;
-  position: relative;
+  /* position: relative; */
   width: var(--max-element-width);
-  height: 160px;
-  animation: scroll 20s linear infinite;
+  height: fit-content;
   display: flex;
+  gap: 0.5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
 }
 
 .marquee-image {
   width: 150px;
   height: 150px;
-  margin: 3px;
-  float: left;
-  white-space: nowrap;
-  display: flex;
-  flex-shrink: 0;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Make it move */
