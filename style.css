@@ -13,6 +13,7 @@
   --header-height: 100px;
   --background-clr: #ecf2ff;
   --element-background-clr: #c83c37;
+  --scroll-speed: 120s;
 }
 
 body {
@@ -284,18 +285,15 @@ li {
   position: relative;
   width: var(--max-element-width);
   height: 160px;
-  animation: scroll 20s linear infinite;
+  animation: scroll var(--scroll-speed) linear infinite;
   display: flex;
+  gap: 0.5rem;
 }
 
 .marquee-image {
   width: 150px;
   height: 150px;
-  margin: 3px;
-  float: left;
-  white-space: nowrap;
-  display: flex;
-  flex-shrink: 0;
+  border-radius: 0.5rem;
 }
 
 /* Make it move */
