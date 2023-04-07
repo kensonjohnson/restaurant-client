@@ -11,7 +11,7 @@
   --max-element-width: 1200px;
   --min-page-width: 400px;
   --header-height: 100px;
-  --background-clr: #ecf2ff;
+  --background-clr: white;
   --element-background-clr: #c83c37;
   --scroll-speed: 120s;
 }
@@ -337,35 +337,36 @@ li {
   }
 }
 
-/* Special's Section */
 #specials {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  gap: 2rem;
   min-height: fit-content;
-  padding: 3rem;
+  padding-bottom: 3rem;
   background: var(--background-clr);
-  border-top: 6px solid var(--element-background-clr);
   border-bottom: 6px solid var(--element-background-clr);
 }
 
 .special-container {
   width: var(--max-element-width);
+  height: min;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 30px 20px 10px;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.specials-link {
+  text-decoration: none;
 }
 
 .card {
   width: 300px;
-  height: fit-content;
-  background: var(--element-background-clr);
-  margin: 1rem;
-  margin-bottom: 3rem;
-  border-radius: 4px;
+  height: 33rem;
+  display: flex;
   flex-direction: column;
+  background: var(--element-background-clr);
+  border-radius: 4px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -387,14 +388,12 @@ li {
 }
 
 .combo-description {
-  position: relative;
   margin-top: -40px;
   padding: 10px 15px;
+  padding-top: 0;
   text-align: center;
   color: var(--background-clr);
 }
-
-/* About Us Section */
 
 #about-us {
   padding-top: 0;
@@ -412,7 +411,7 @@ li {
   border-bottom: 6px solid var(--element-background-clr);
 }
 
-.section-2 {
+.red-header {
   width: 100%;
   text-align: center;
   color: var(--element-background-clr);
@@ -471,7 +470,6 @@ li {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    /* padding-top: 0; */
     height: fit-content;
   }
 
