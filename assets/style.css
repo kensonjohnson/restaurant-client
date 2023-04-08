@@ -362,7 +362,11 @@ li {
 
 .card {
   width: 300px;
+<<<<<<< Updated upstream:style.css
   height: 33rem;
+=======
+  height: 30rem;
+>>>>>>> Stashed changes:assets/style.css
   display: flex;
   flex-direction: column;
   background: var(--element-background-clr);
