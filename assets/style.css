@@ -346,8 +346,8 @@ li {
 }
 
 .special-container {
-  width: var(--max-element-width);
-  height: min;
+  max-width: var(--max-element-width);
+  height: min-content;
   display: flex;
   justify-content: center;
   align-items: center;
