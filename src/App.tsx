@@ -1,9 +1,13 @@
+import { Button, Container } from "react-bootstrap";
+
 function App() {
   return (
-    <>
+    <Container fluid="lg">
       <h1 className="bg-primary">Hello World!</h1>
-      <button className="btn btn-primary">Button</button>
-    </>
+      <Button variant="primary" className="rounded-0">
+        Button
+      </Button>
+    </Container>
   );
 }
 
