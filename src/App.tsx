@@ -1,9 +1,10 @@
 import { Button, Container } from "react-bootstrap";
+import { Header } from "./components/Header";
 
 function App() {
   return (
-    <Container fluid="lg">
-      <h1 className="bg-primary">Hello World!</h1>
+    <Container fluid="xl" className="shadow">
+      <Header />
       <Button variant="primary" className="rounded-0">
         Button
       </Button>
