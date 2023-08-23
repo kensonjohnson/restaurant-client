@@ -3,7 +3,7 @@ import { Hero } from "./Hero";
 
 export function Main() {
   return (
-    <Container as="main">
+    <Container as="main" className="px-0">
       <Hero />
     </Container>
   );

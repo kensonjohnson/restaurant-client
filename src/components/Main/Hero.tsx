@@ -1,14 +1,14 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
+import { HeroImage } from "./HeroImage";
+// import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
-    <Container as="section">
-      <Row>
-        <Col>Image 1</Col>
-        <Col>Image 2</Col>
-        <Col>Image 3</Col>
-        <Col>Image 4</Col>
-      </Row>
-    </Container>
+    <Row as="section" className="px-0" style={{ height: 600 }}>
+      <HeroImage />
+      <HeroImage />
+      <HeroImage />
+      <HeroImage />
+    </Row>
   );
 }
