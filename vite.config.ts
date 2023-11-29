@@ -5,7 +5,7 @@ import { cwd } from "process";
 let baseUrl = "/";
 
 if (process.env.NODE_ENV === "production") {
-  baseUrl = cwd().split("/").pop() || "/";
+  baseUrl = "/" + (cwd().split("/").pop() || "");
 }
 
 // https://vitejs.dev/config/
