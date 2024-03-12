@@ -1,185 +1,357 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tomy's</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tomy's</title>
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
-  <script src="script.js" defer></script>
-</head>
-
-<body>
-  <section>
-    <header>
-      <a href="#" class="logo">
-        <img class="t-logo" src="assets/images/tomy1.png" alt="logo-image">
-        <img class="t-logo" src="assets/images/tomy2.png" alt="logo-second-image">
-      </a>
-      <ul class="navigation active">
-        <li><a href="#specials" style="--i:2;">Menu</a></li>
-        <li><a href="#specials" style="--i:3;">Specials</a></li>
-        <li><a href="#about-us" style="--i:4;">About</a></li>
-      </ul>
-      <div class="menu" onclick="toggleMenu()" data-menu-button></div>
-    </header>
-    <div class="container">
-      <div class="box" style="--i:3;">
-        <div class="imgBx">
-          <img src="assets/images/marquee/marquee_cheeseburger.png">
-        </div>
-      </div>
-      <div class="box" style="--i:4;">
-        <div class="imgBx">
-          <img src="assets/images/marquee/marquee_burrito.png">
-        </div>
-      </div>
-      <div class="box" style="--i:5;">
-        <div class="imgBx">
-          <img src="assets/images/marquee/marquee_doubleB.png">
-        </div>
-      </div>
-      <div class="box" style="--i:6;">
-        <div class="imgBx">
-          <img src="assets/images/marquee/marquee_pancakes.png">
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-
-      <a href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4" rel="noopener noreferrer" target="_blank" id="order-now" class="myButton" style="--i:10">Order Now!</a>
-
-      <p class="copyrightText"><span class="blinking">Breakfast All Day!</span>
-      </p>
-    </div>
-
-  </section>
-
-  <section id="marquee-section">
-
-    <div class="marquee-title">
-    </div>
-
-    <div class="marquee-container">
-      <div class="marquee">
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&item=64">
-          <img class="marquee-image" src="assets/images/carousel/club_sandwich.png">
+  <body>
+    <section>
+      <header>
+        <a href="#" class="logo">
+          <img class="t-logo" src="assets/images/tomy1.png" alt="logo-image" />
+          <img
+            class="t-logo"
+            src="assets/images/tomy2.png"
+            alt="logo-second-image"
+          />
         </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&item=105">
-          <img class="marquee-image" src="assets/images/carousel/cheese_burger.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&item=107">
-          <img class="marquee-image" src="assets/images/carousel/chicken_breast.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&item=37">
-          <img class="marquee-image" src="assets/images/carousel/double_meat_double_cheese.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=13">
-          <img class="marquee-image" src="assets/images/carousel/chicken_strips.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=58">
-          <img class="marquee-image" src="assets/images/carousel/chili_fries.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=33">
-          <img class="marquee-image" src="assets/images/carousel/huevos_rancheros.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4">
-          <img class="marquee-image" src="assets/images/carousel/egg_burrito.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4">
-          <img class="marquee-image" src="assets/images/carousel/pancakes.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=168">
-          <img class="marquee-image" src="assets/images/carousel/omelete.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=185">
-          <img class="marquee-image" src="assets/images/carousel/chorizo_burrito.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=108">
-          <img class="marquee-image" src="assets/images/carousel/baconcheese.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=14">
-          <img class="marquee-image" src="assets/images/carousel/fish.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&item=65">
-          <img class="marquee-image" src="assets/images/carousel/fried_chicken_sandwich.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4">
-          <img class="marquee-image" src="assets/images/carousel/burrito.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&item=106">
-          <img class="marquee-image" src="assets/images/carousel/pastrami.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=103">
-          <img class="marquee-image" src="assets/images/carousel/burger.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=12">
-          <img class="marquee-image" src="assets/images/carousel/shrimp.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=10">
-          <img class="marquee-image" src="assets/images/carousel/bacon_cheese.png">
-        </a>
-        <a rel="noopener noreferrer" target="_blank" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=11">
-          <img class="marquee-image" src="assets/images/carousel/steak.png">
-        </a>
-      </div>
-    </div>
-    <div class="marquee-footer"></div>
-    <div id="specials">
-      <h1 class="red-header">Specials</h1>
-      <div class="special-container">
-        <a class="specials-link" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=10" rel="noopener noreferrer" target="_blank">
-          <div class="card">
-            <div class="combo-image">
-              <img src="assets/images/specials/baconcheese.png">
-            </div>
-            <div class="combo-description">
-              <h2>Bacon Cheeseburger</h2>
-              <p>Two 1/4 pound 100% beef patties, two slices of American cheese, bacon, lettuce, tomato, onion and thousand island dressing. Combo meal comes with seasoned French fries and a medium fountain drink.</p>
-            </div>
+        <ul class="navigation active">
+          <li><a href="#specials" style="--i: 2">Menu</a></li>
+          <li><a href="#specials" style="--i: 3">Specials</a></li>
+          <li><a href="#about-us" style="--i: 4">About</a></li>
+        </ul>
+        <div class="menu" onclick="toggleMenu()" data-menu-button></div>
+      </header>
+      <div class="container">
+        <div class="box" style="--i: 3">
+          <div class="imgBx">
+            <img src="assets/images/marquee/marquee_cheeseburger.png" />
           </div>
-        </a>
-        <a class="specials-link" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&item=12" rel="noopener noreferrer" target="_blank">
-          <div class="card">
-            <div class="combo-image">
-              <img src="assets/images/specials/shrimp.png">
-            </div>
-            <div class="combo-description">
-              <h2>Shrimp Basket</h2>
-              <p>Battered and fried butterfly-cut Shrimp, side salad, French fries, dinner role and medium fountain drink.</p>
-            </div>
+        </div>
+        <div class="box" style="--i: 4">
+          <div class="imgBx">
+            <img src="assets/images/marquee/marquee_burrito.png" />
           </div>
-        </a>
-        <a class="specials-link" href="https://tomyshamburgers.square.site/s/order?location=11ea7e8b73fec515bd870cc47a2b63e4&menu=&item=14" rel="noopener noreferrer" target="_blank">
-          <div class="card">
-            <div class="combo-image">
-              <img src="assets/images/specials/fish.png">
-            </div>
-            <div class="combo-description">
-              <h2>Fish & Chips</h2>
-              <p>Battered wild-caught fish, French fries, side salad and dinner role. Combo comes with medium fountain drink.</p>
-            </div>
+        </div>
+        <div class="box" style="--i: 5">
+          <div class="imgBx">
+            <img src="assets/images/marquee/marquee_doubleB.png" />
           </div>
+        </div>
+        <div class="box" style="--i: 6">
+          <div class="imgBx">
+            <img src="assets/images/marquee/marquee_pancakes.png" />
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
+      <div class="footer">
+        <a
+          href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          rel="noopener noreferrer"
+          target="_blank"
+          id="order-now"
+          class="myButton"
+          style="--i: 10"
+          >Order Now!</a
+        >
 
-  </section>
+        <p class="copyrightText">
+          <span class="blinking">Breakfast All Day!</span>
+        </p>
+      </div>
+    </section>
 
-  <section id="about-us">
-    <div class="red-header">
-      <h2>About Us</h2>
-    </div>
+    <section id="marquee-section">
+      <div class="marquee-title"></div>
 
-    <div id="about-us-inner">
-      <div class="image3"><img class="img3" src="assets/images/tomy.png"></div>
-      <div class="image3"><img class="img3" id="img-border" src="assets/images/tomyLogo.png"></div>
-      <div class="image3"><img class="img3" id="img-border" src="assets/images/tomyStmnt.png"></div>
-      <div class="image3"><img class="img3" src="assets/images/tomyBurger.png"></div>
-    </div>
+      <div class="marquee-container">
+        <div class="marquee">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/club_sandwich.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/cheese_burger.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/chicken_breast.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/double_meat_double_cheese.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/chicken_strips.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/chili_fries.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/huevos_rancheros.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/egg_burrito.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/pancakes.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/omelete.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/chorizo_burrito.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/baconcheese.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img class="marquee-image" src="assets/images/carousel/fish.png" />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/fried_chicken_sandwich.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/burrito.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/pastrami.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/burger.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/shrimp.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img
+              class="marquee-image"
+              src="assets/images/carousel/bacon_cheese.png"
+            />
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+          >
+            <img class="marquee-image" src="assets/images/carousel/steak.png" />
+          </a>
+        </div>
+      </div>
+      <div class="marquee-footer"></div>
+      <div id="specials">
+        <h1 class="red-header">Specials</h1>
+        <div class="special-container">
+          <a
+            class="specials-link"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div class="card">
+              <div class="combo-image">
+                <img src="assets/images/specials/baconcheese.png" />
+              </div>
+              <div class="combo-description">
+                <h2>Bacon Cheeseburger</h2>
+                <p>
+                  Two 1/4 pound 100% beef patties, two slices of American
+                  cheese, bacon, lettuce, tomato, onion and thousand island
+                  dressing. Combo meal comes with seasoned French fries and a
+                  medium fountain drink.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a
+            class="specials-link"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div class="card">
+              <div class="combo-image">
+                <img src="assets/images/specials/shrimp.png" />
+              </div>
+              <div class="combo-description">
+                <h2>Shrimp Basket</h2>
+                <p>
+                  Battered and fried butterfly-cut Shrimp, side salad, French
+                  fries, dinner role and medium fountain drink.
+                </p>
+              </div>
+            </div>
+          </a>
+          <a
+            class="specials-link"
+            href="https://www.doordash.com/store/tomy's-hamburgers-garden-grove-25130155/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div class="card">
+              <div class="combo-image">
+                <img src="assets/images/specials/fish.png" />
+              </div>
+              <div class="combo-description">
+                <h2>Fish & Chips</h2>
+                <p>
+                  Battered wild-caught fish, French fries, side salad and dinner
+                  role. Combo comes with medium fountain drink.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <section id="about-us">
+      <div class="red-header">
+        <h2>About Us</h2>
+      </div>
 
-  </section>
-</body>
-
+      <div id="about-us-inner">
+        <div class="image3">
+          <img class="img3" src="assets/images/tomy.png" />
+        </div>
+        <div class="image3">
+          <img class="img3" id="img-border" src="assets/images/tomyLogo.png" />
+        </div>
+        <div class="image3">
+          <img class="img3" id="img-border" src="assets/images/tomyStmnt.png" />
+        </div>
+        <div class="image3">
+          <img class="img3" src="assets/images/tomyBurger.png" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
